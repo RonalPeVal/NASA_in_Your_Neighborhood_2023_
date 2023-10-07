@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Temperatura Tierra-Oceano Satelites
+{% endblock title %}
+
+{% block content %}
+    <form method="get" action="">
+        <label for="start_year">Año de inicio:</label>
+        <input type="number" name="start_year" id="start_year" min="1880" max="2022" value="{{ start_year|default:'1880' }}">
+        
+        <label for="end_year">Año de fin:</label>
+        <input type="number" name="end_year" id="end_year" min="1880" max="2022" value="{{ end_year|default:'2022' }}">
+        
+        <input type="submit" value="Filtrar">
+    </form>
+
+    {{ chart|safe }}
+{% endblock content %}
+
+
