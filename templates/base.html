@@ -2,17 +2,226 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script src="{% static 'js/home.js' %}"></script>
-    {% block css %}{% endblock %}
-    {% block js %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+
     <title>{% block title %}{% endblock %}</title>
 </head>
+
 <body>
-    {% block content %}
-    {% endblock %}
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar-bg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#inicio" style="font-size: 24px;"><i class="fas fa-home"></i> Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#acerca" style="font-size: 18px;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#recursos" style="font-size: 18px;">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#equipo" style="font-size: 18px;">Team</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-4" id="inicio" style="padding-top: 60px;">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Acerca de -->
+    <!-- Acerca de -->
+    <section class="container mt-4 custom-margin" id="acerca">
+        <h2 class="text-center mb-4">ABOUT</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="d-flex flex-column h-100 justify-content-center">
+                    <h3 class="text-center">Main Sections</h3>
+                    <p class="text-center">The "Temperature Around Us" project is a climate education website that uses data from NASA. Provides information about the temperature in different parts of the world and the factors that influence the climate.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex justify-content-center">
+                    <!-- Imagen correspondiente a Secciones Principales -->
+                    <img src="https://graffica.info/wp-content/uploads/2017/08/LogoNasaSpotB-1200x675.jpg" alt="Imagen 1" class="img-fluid img-thumbnail">
+                </div>
+            </div>
+        </div>
+    
+        <div class="row mt-4 align-items-center">
+            <div class="col-md-6">
+                <div class="d-flex flex-column h-100 justify-content-center">
+                    <!-- Imagen correspondiente a Beneficios -->
+                    <img src="https://mma.gob.cl/wp-content/uploads/2015/06/nasa.jpg" alt="Imagen 2" class="img-fluid img-thumbnail">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex flex-column h-100 justify-content-center">
+                    <h3 class="text-center">Benefits</h3>
+                    <p>Learn about the climate in an easy and accessible way. Access reliable and updated information. Experience a visually appealing design. Available online from anywhere.</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row mt-4 align-items-center">
+            <div class="col-md-6">
+                <div class="d-flex flex-column h-100 justify-content-center">
+                    <h3 class="text-center">Goals</h3>
+                    <p class="text-center">We hope to achieve the following with this project: Create an effective educational tool for understanding climate. Promote awareness about climate and its impact on the world. Inspire actions to protect our environment.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex justify-content-center">
+                    <!-- Imagen correspondiente a Objetivos -->
+                    <img src="https://blog.creaf.cat/wp-content/uploads/2021/12/top10-post2.jpg" alt="Imagen 3" class="img-fluid img-thumbnail">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Recursos -->
+    <section class="container mt-4 custom-margin" id="recursos">
+        <h2 class="text-center mb-4">RESOURCES</h2>
+        <div class="row" style="padding-top: 160px;">
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img src="https://cdn.discordapp.com/attachments/1131268503232589929/1160628926683566160/nasa_logo_icon_170926.png" alt="Icono de Nasa" width="100">
+                    <p>We use NASA data to obtain accurate and up-to-date climate information.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img src="https://cdn.discordapp.com/attachments/1131268503232589929/1160628978185420880/919827.png" alt="Icono de HTML" width="100">
+                    <p>HTML was used for the structure and content markup of our website.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" alt="Icono de CSS" width="100">
+                    <p>CSS was used to style and design the look and feel of our website.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/javascript-2752148-2284965.png?f=webp" alt="Icono de JavaScript" width="100">
+                    <p>JavaScript was used to add interactivity and advanced functionality to our website.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="text-center">
+                    <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/django_original_logo_icon_146559.png" alt="Icono de Django" width="100">
+                    <p>We use Django as a framework for the development of the page</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="container mt-4 custom-margin" id="equipo">
+        <h2 class="text-center mb-4">TEAM</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <i class="fas fa-user fa-5x text-center mt-4"></i>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Gongora Juàrez Adriano</h5>
+                        <p class="card-text">COO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <i class="fas fa-user fa-5x text-center mt-4"></i>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Coaquira Cruz Jefferson</h5>
+                        <p class="card-text">CEO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <i class="fas fa-user fa-5x text-center mt-4"></i>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tolentino Aguilar Bella</h5>
+                        <p class="card-text">CMO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <i class="fas fa-user fa-5x text-center mt-4"></i>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Vilca Velasquez Eduardo</h5>
+                        <p class="card-text">CPO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <i class="fas fa-user fa-5x text-center mt-4"></i>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Kacha Quispe Victor</h5>
+                        <p class="card-text">Front-End</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Agrega tarjetas similares para otros miembros de tu equipo aquí -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: rgb(43, 105, 146); color: #fff;">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="https://assets.spaceappschallenge.org/media/images/SpaceAppsLogo_Default_2ColorWhi.width-440.jpegquality-60.png"
+                        alt="Logotipo de la NASA" class="nasa-logo img-fluid" width="150">
+                </div>
+                <div class="col-md-4 text-center">
+                    <p>&copy; 2023 noVanity</p>
+                    <a href="https://github.com/Adr1ni/NASA_in_Your_Neighborhood_2023_Arequipa" target="_blank"
+                        style="color: #000000;">
+                        <i class="fab fa-github github-icon" style="color: #000000;"></i> Visit us on GitHub
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="https://www.tecsup.edu.pe/themes/tecsup/logo.svg" alt="Logotipo del Instituto"
+                        class="instituto-logo img-fluid" width="150">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>

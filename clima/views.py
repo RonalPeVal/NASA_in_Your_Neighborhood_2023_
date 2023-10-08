@@ -12,7 +12,7 @@ def index(request):
     lowess = []
 
     # Leer los datos desde el archivo "data.txt"
-    with open('clima/data.txt', 'r') as file:
+    with open('clima/data.txt', 'r', encoding='utf-8') as file:
         lines = file.readlines()
 
     # Procesar las líneas para extraer los datos
@@ -44,16 +44,16 @@ def index(request):
         fig = px.line(
             x=años_filtrados,
             y=[no_smoothing_filtrado, lowess_filtrado],
-            title='Índice de temperatura tierra-océano (C) entre {} y {}'
+            title='Land-ocean temperature index (C) entre {} y {}'
                 .format(start_year, end_year),
-            labels={'x': 'Año', 'y': 'Temperatura (C)'},
+            labels={'x': 'Year', 'and': 'Temperature (C)'},
         )
     else:
         fig = px.line(
             x=años,
             y=[no_smoothing, lowess],
-            title='Índice de temperatura tierra-océano (C)',
-            labels={'x': 'Año', 'y': 'Temperatura (C)'},
+            title='Land-ocean temperature index (C)',
+            labels={'x': 'Year', 'and': 'Temperature (C)'},
         )
 
     # Convertir el gráfico en HTML

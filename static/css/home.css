@@ -1,3 +1,17 @@
-*{
-    color: aquamarine;
+.custom-navbar-bg {
+    background-color: rgb(43, 105, 146); /* Cambia este valor al color deseado */
+}
+
+.custom-margin {
+    margin-bottom: 240px; /* Ajusta el valor según el espacio deseado en píxeles */
+}
+
+/* En tu archivo de estilos personalizado (home.css) */
+.section-offset {
+    margin-top: -70px; /* Ajusta el valor según la altura de tu Navbar */
+}
+
+
+section {
+    padding-top: 70px; /* Ajusta el valor según tus preferencias */
 }
