@@ -44,7 +44,7 @@ def index(request):
         fig = px.line(
             x=años_filtrados,
             y=[no_smoothing_filtrado, lowess_filtrado],
-            title='Land-ocean temperature index (C) entre {} y {}'
+            title='Land-ocean temperature index (C) between {} and {}'
                 .format(start_year, end_year),
             labels={'x': 'Year', 'and': 'Temperature (C)'},
         )
